@@ -10,6 +10,7 @@ html {
 
 .page {
   display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -42,7 +43,7 @@ ol {
   display: flex;
   align-items: flex-end;
   column-gap: 30px;
-  width: 1140px;
+  max-width: 1140px;
   margin: auto;
 }
 
@@ -50,10 +51,6 @@ ol {
   position: relative;
   height: 298px;
   overflow: auto;
-}
-
-.content__list::-webkit-scrollbar {
-  width: 0;
 }
 
 .content__details {
@@ -69,7 +66,7 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
 }
 
 .result__video {
@@ -85,6 +82,7 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  padding: 2px 2px 6px;
 } 
 
 .content__video-card-thumbnail {
@@ -94,7 +92,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
@@ -106,6 +104,7 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
 }
@@ -127,17 +126,25 @@ ol {
   background: #545050;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__video-card-title {
+  max-width: 200px;
   margin-bottom: 6px;
-  font-family: Oswald;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed";
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -155,8 +162,8 @@ ol {
 
 .search-form {
   display: flex;
-  justify-content: space-between;
-  align-items: start;
+  align-items: center;
+  gap: 40px;
 }
 
 .search-form__fieldset-title {
@@ -168,6 +175,7 @@ ol {
 
 .search-form__fieldset {
   border: none;
+  padding-bottom: 5px;
 }
 
 .search-form__label {
@@ -216,9 +224,9 @@ ol {
 .search-form__pseudo-checkbox::before {
   content: "";
   display: none;
-  width: 14px;
-  height: 14px;
-  margin: auto;
+  width: 15px;
+  height: 15px;
+  margin: 1px 1px 1px 1px;
   background-color: #fff;
 }
 
@@ -234,7 +242,7 @@ ol {
   border-left: 0;
   padding: 2.5px 14px 2.5px 0;
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed";
   font-weight: 400;
   font-size: 18px;
   background: transparent;
@@ -254,7 +262,7 @@ ol {
   border: 1px solid #fff;
   padding: 6px 73.5px;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed";
   font-weight: 700;
   font-size: 18px;
   text-align: center;
